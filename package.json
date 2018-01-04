@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "native-echarts@git+https://github.com/somonus/react-native-echarts.git",
+        "scope": null,
+        "escapedName": "native-echarts",
+        "name": "native-echarts",
+        "rawSpec": "git+https://github.com/somonus/react-native-echarts.git",
+        "spec": "git+https://github.com/somonus/react-native-echarts.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:somonus/react-native-echarts.git",
+          "sshUrl": "git+ssh://git@github.com/somonus/react-native-echarts.git",
+          "httpsUrl": "git+https://github.com/somonus/react-native-echarts.git",
+          "gitUrl": "git://github.com/somonus/react-native-echarts.git",
+          "shortcut": "github:somonus/react-native-echarts",
+          "directUrl": "https://raw.githubusercontent.com/somonus/react-native-echarts/master/package.json"
+        }
+      },
+      "D:\\ghs\\ETApp"
+    ]
+  ],
+  "_from": "git+https://github.com/somonus/react-native-echarts.git",
+  "_id": "native-echarts@0.3.0",
+  "_inCache": true,
+  "_location": "/native-echarts",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "native-echarts@git+https://github.com/somonus/react-native-echarts.git",
+    "scope": null,
+    "escapedName": "native-echarts",
+    "name": "native-echarts",
+    "rawSpec": "git+https://github.com/somonus/react-native-echarts.git",
+    "spec": "git+https://github.com/somonus/react-native-echarts.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:somonus/react-native-echarts.git",
+      "sshUrl": "git+ssh://git@github.com/somonus/react-native-echarts.git",
+      "httpsUrl": "git+https://github.com/somonus/react-native-echarts.git",
+      "gitUrl": "git://github.com/somonus/react-native-echarts.git",
+      "shortcut": "github:somonus/react-native-echarts",
+      "directUrl": "https://raw.githubusercontent.com/somonus/react-native-echarts/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/somonus/react-native-echarts.git#eeeaead411f01907be5ee2d033c11366e4c2b127",
+  "_shasum": "5a076a14bbebac368c27034a019ff6eaf902ef19",
+  "_shrinkwrap": null,
+  "_spec": "native-echarts@git+https://github.com/somonus/react-native-echarts.git",
+  "_where": "D:\\ghs\\ETApp",
+  "author": {
+    "name": "somonus"
+  },
+  "bugs": {
+    "url": "https://github.com/somonus/react-native-echarts/issues"
+  },
+  "dependencies": {
+    "echarts": "3.2.3"
+  },
+  "description": "echarts for react-native",
+  "devDependencies": {},
+  "directories": {
+    "example": "example"
+  },
+  "gitHead": "eeeaead411f01907be5ee2d033c11366e4c2b127",
+  "homepage": "https://github.com/somonus/react-native-echarts#readme",
+  "keywords": [
+    "react-native",
+    "echarts",
+    "chart",
+    "charts"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "native-echarts",
+  "optionalDependencies": {},
+  "readme": "# native-echarts\r\n\r\n[![NPM Version](https://img.shields.io/npm/v/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-echarts)\r\n  [![npm](https://img.shields.io/npm/dm/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-echarts)\r\n  [![License](http://img.shields.io/npm/l/native-echarts.svg?style=flat)](https://raw.githubusercontent.com/somonus/react-native-echarts/master/LICENSE.md)\r\n  \r\n## install\r\n\r\n$ npm install native-echarts --save\r\n\r\n## Usage\r\n\r\nThe Usage is complete consistent with Echarts\r\n\r\ncomponent props:\r\n\r\n* *option* (object): The option for echarts: [Documentation](http://echarts.baidu.com/option.html#title)。 \r\n* *width* (number): The width of the chart. The default value is the outer container width. \r\n* *height* (number): The height of the chart. The default value is 400. \r\n\r\n\r\n```js\r\nimport React, { Component } from 'react';\r\nimport {\r\n  AppRegistry,\r\n  StyleSheet,\r\n  Text,\r\n  View\r\n} from 'react-native';\r\nimport Echarts from 'native-echarts';\r\n\r\nexport default class app extends Component {\r\n  render() {\r\n    const option = {\r\n      title: {\r\n          text: 'ECharts demo'\r\n      },\r\n      tooltip: {},\r\n      legend: {\r\n          data:['销量']\r\n      },\r\n      xAxis: {\r\n          data: [\"衬衫\",\"羊毛衫\",\"雪纺衫\",\"裤子\",\"高跟鞋\",\"袜子\"]\r\n      },\r\n      yAxis: {},\r\n      series: [{\r\n          name: '销量',\r\n          type: 'bar',\r\n          data: [5, 20, 36, 10, 10, 20]\r\n      }]\r\n    };\r\n    return (\r\n      <Echarts option={option} height={300} />\r\n    );\r\n  }\r\n}\r\n\r\nAppRegistry.registerComponent('app', () => app);\r\n\r\n```\r\n\r\n\r\n\r\n##Example\r\n\r\n*run demo*\r\n\r\n```\r\ncd example\r\nnpm install\r\nnpm start\r\n```\r\n\r\n### IOS\r\n\r\nOpen the xcode project in the ios directory and click run\r\n\r\nscreenshots：\r\n\r\n![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoIOS.png)\r\n\r\n### Android\r\n\r\nOpen the Android project in the android directory with Android Studio and click run.\r\n\r\nscreenshots：\r\n\r\n![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoAndroid.png)\r\n\r\n## License\r\n\r\nnative-echarts is released under the MIT license.\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somonus/react-native-echarts.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.3.0"
+}
